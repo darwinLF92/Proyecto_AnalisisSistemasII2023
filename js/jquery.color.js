@@ -1,8 +1,3 @@
-/*
- * jQuery Color Animations
- * Copyright 2007 John Resig
- * Released under the MIT and GPL licenses.
- */
 
 (function(jQuery){
 
@@ -22,11 +17,7 @@
 		}
 	});
 
-	// Color Conversion functions from highlightFade
-	// By Blair Mitchelmore
-	// http://jquery.offput.ca/highlightFade/
 
-	// Parse strings looking for color tuples [255,255,255]
 	function getRGB(color) {
 		var result;
 
@@ -70,9 +61,7 @@
 		return getRGB(color);
 	};
 	
-	// Some named colors to work with
-	// From Interface by Stefan Petre
-	// http://interface.eyecon.ro/
+
 
 	var colors = {
 		aqua:[0,255,255],

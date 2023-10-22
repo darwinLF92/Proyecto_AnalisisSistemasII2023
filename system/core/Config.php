@@ -1,31 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * CodeIgniter
- *
- * An open source application development framework for PHP 5.1.6 or newer
- *
- * @package		CodeIgniter
- * @author		ExpressionEngine Dev Team
- * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
- * @license		http://codeigniter.com/user_guide/license.html
- * @link		http://codeigniter.com
- * @since		Version 1.0
- * @filesource
- */
 
-// ------------------------------------------------------------------------
-
-/**
- * CodeIgniter Config Class
- *
- * This class contains functions that enable config files to be managed
- *
- * @package		CodeIgniter
- * @subpackage	Libraries
- * @category	Libraries
- * @author		ExpressionEngine Dev Team
- * @link		http://codeigniter.com/user_guide/libraries/config.html
- */
 class CI_Config {
 
 	/**
@@ -47,17 +21,7 @@ class CI_Config {
 	 */
 	var $_config_paths = array(APPPATH);
 
-	/**
-	 * Constructor
-	 *
-	 * Sets the $config data from the primary config.php file as a class variable
-	 *
-	 * @access   public
-	 * @param   string	the config file name
-	 * @param   boolean  if configuration values should be loaded into their own section
-	 * @param   boolean  true if errors should just return false, false if an error message should be displayed
-	 * @return  boolean  if the file was successfully loaded or not
-	 */
+
 	function __construct()
 	{
 		$this->config =& get_config();
@@ -82,17 +46,7 @@ class CI_Config {
 		}
 	}
 
-	// --------------------------------------------------------------------
 
-	/**
-	 * Load Config File
-	 *
-	 * @access	public
-	 * @param	string	the config file name
-	 * @param   boolean  if configuration values should be loaded into their own section
-	 * @param   boolean  true if errors should just return false, false if an error message should be displayed
-	 * @return	boolean	if the file was loaded correctly
-	 */
 	function load($file = '', $use_sections = FALSE, $fail_gracefully = FALSE)
 	{
 		$file = ($file == '') ? 'config' : str_replace('.php', '', $file);
@@ -174,18 +128,7 @@ class CI_Config {
 		return TRUE;
 	}
 
-	// --------------------------------------------------------------------
 
-	/**
-	 * Fetch a config file item
-	 *
-	 *
-	 * @access	public
-	 * @param	string	the config item name
-	 * @param	string	the index name
-	 * @param	bool
-	 * @return	string
-	 */
 	function item($item, $index = '')
 	{
 		if ($index == '')
@@ -215,16 +158,7 @@ class CI_Config {
 		return $pref;
 	}
 
-	// --------------------------------------------------------------------
 
-	/**
-	 * Fetch a config file item - adds slash after item (if item is not empty)
-	 *
-	 * @access	public
-	 * @param	string	the config item name
-	 * @param	bool
-	 * @return	string
-	 */
 	function slash_item($item)
 	{
 		if ( ! isset($this->config[$item]))
